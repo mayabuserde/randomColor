@@ -17,8 +17,12 @@ btn.addEventListener('click', function () {
     rgb = `rgb(${red},${green},${blue})`;
     h1.innerText = rgb;
     body.setAttribute('style', `background-color : ${rgb}`);
-    //if color very dart change text to white
-
+    //if color very dark change text to white
+    if (red + green + blue <= 300) {
+        h1.setAttribute('style', `color : white`);
+    } else {
+        h1.setAttribute('style', `color : black`);
+    }
 
 })
 
